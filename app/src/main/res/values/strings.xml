@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PocketBank</string>
+    <string-array name="languages">
+        <item>CHOOSE YOUR LANGUAGE</item>
+        <item>Hindi</item>
+        <item>English</item>
+        <item>Gujarati</item>
+        <item>Marathi</item>
+        <item>Tamil</item>
+    </string-array>
+</resources>
