@@ -3,10 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.pocketbank">
 
-
-
-
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,6 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PocketBank"
         tools:targetApi="31">
+        <activity
+            android:name=".BillPaymentPage"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".NewuserActivity"
             android:exported="false">
