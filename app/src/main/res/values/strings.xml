@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">PocketBank</string>
+    <string name="hyperlink">New user? Register here<a href="C:\Users\gudis\AndroidStudioProjects\PocketBank\app\src\main\java\com\example\pocketbank\NewuserActivity.java"></a></string>
     <string-array name="languages">
         <item>CHOOSE YOUR LANGUAGE</item>
         <item>Hindi</item>

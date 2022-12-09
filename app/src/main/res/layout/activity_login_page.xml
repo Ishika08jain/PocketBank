@@ -64,7 +64,7 @@
         android:layout_marginTop="579dp"
         android:layout_marginEnd="101dp"
         android:layout_marginBottom="133dp"
-        android:text="New user? Register here"
+        android:text="@string/hyperlink"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

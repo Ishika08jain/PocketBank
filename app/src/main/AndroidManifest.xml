@@ -18,6 +18,13 @@
         android:theme="@style/Theme.PocketBank"
         tools:targetApi="31">
         <activity
+            android:name=".NewuserActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Payments"
             android:exported="false">
             <meta-data
