@@ -37,6 +37,14 @@ public class PaymentsPage extends AppCompatActivity {
         textView14 =  findViewById(R.id.textView14);
         textView15 =  findViewById(R.id.textView15);
 
+
+
+
+
+
+
+
+
         textView11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
