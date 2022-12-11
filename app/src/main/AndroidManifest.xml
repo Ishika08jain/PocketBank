@@ -33,6 +33,20 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".KyctwoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".KycActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".BillPaymentPage"
             android:exported="false">
             <meta-data
