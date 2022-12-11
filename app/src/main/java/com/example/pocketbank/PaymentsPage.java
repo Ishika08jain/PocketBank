@@ -48,10 +48,12 @@ public class PaymentsPage extends AppCompatActivity {
             }
         });
 
-        textView12.setOnClickListener(view -> {
-            Intent intent= new Intent(getApplicationContext(),UpiActivity.class);
-            startActivity(intent);
-
+        textView12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), UpiActivity.class);
+                startActivity(intent);
+            }
         });
     }
 }

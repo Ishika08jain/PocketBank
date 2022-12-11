@@ -50,7 +50,7 @@
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="149dp"
+            android:layout_marginTop="163dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="280dp"
             android:text="UPI"
@@ -132,7 +132,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageButton"
-            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -152,23 +152,25 @@
             android:id="@+id/imageView9"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginStart="171dp"
             android:layout_marginTop="23dp"
             android:layout_marginEnd="6dp"
             android:layout_marginBottom="19dp"
             app:layout_constraintBottom_toBottomOf="@+id/textView11"
             app:layout_constraintEnd_toStartOf="@+id/imageView10"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/bills" />
 
         <ImageView
             android:id="@+id/imageView10"
             android:layout_width="0dp"
-            android:layout_height="91dp"
-            android:layout_marginTop="39dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="38dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView12"
+            android:layout_height="0dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="298dp"
+            app:layout_constraintBottom_toTopOf="@+id/button3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView9"
             app:layout_constraintTop_toTopOf="parent"
