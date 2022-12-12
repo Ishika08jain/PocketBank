@@ -49,7 +49,7 @@ public class LoginPage extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),PaymentsPage.class);
+                Intent intent=new Intent(getApplicationContext(),Payments.class);
                 startActivity(intent);
             }
         });
@@ -99,7 +99,7 @@ public class LoginPage extends AppCompatActivity {
                         String passwordfromDB = snapshot.child(username).child("password").getValue(String.class);
                         if(!Objects.equals(passwordfromDB, editTextTextPassword)) {
                             editTextTextEmailAddress.setError(null);
-                            Intent intent = new Intent(LoginPage.this, PaymentsPage.class);
+                            Intent intent = new Intent(LoginPage.this, Payments.class);
                             startActivity(intent);
                         } else {
                             editTextTextPassword.setError("Invalid credentials");

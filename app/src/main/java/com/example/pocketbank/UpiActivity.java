@@ -19,7 +19,7 @@ public class UpiActivity extends AppCompatActivity {
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(getApplicationContext(),PaymentsPage.class);
+                Intent intent= new Intent(getApplicationContext(),Payments.class);
                 startActivity(intent);
             }
         });

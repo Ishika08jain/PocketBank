@@ -16,13 +16,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TimerTask;
 
-public class PaymentsPage extends AppCompatActivity {
+public class Payments extends AppCompatActivity {
     ImageSlider imageSlider;
     TextView textView10, textView11, textView12, textView13, textView14, textView15;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payments_page);
+        setContentView(R.layout.activity_payments);
         imageSlider =findViewById(R.id.image_slider);
         ArrayList<SlideModel> imageList = new ArrayList<>();
         imageList.add(new SlideModel(R.drawable.image1,null));

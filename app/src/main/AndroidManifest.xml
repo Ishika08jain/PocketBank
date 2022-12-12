@@ -14,6 +14,20 @@
         android:theme="@style/Theme.PocketBank"
         tools:targetApi="31">
         <activity
+            android:name=".Payments"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".accountpage"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".UpiActivity"
             android:exported="false">
             <meta-data
@@ -69,14 +83,11 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".PaymentsPage"
-            android:exported="false" />
-        <activity
             android:name=".LoginPage"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
