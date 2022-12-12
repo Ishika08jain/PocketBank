@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "314454828541",
+    "project_id": "pocketbank-d5a21",
+    "storage_bucket": "pocketbank-d5a21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314454828541:android:88f44a82c00adcf83ca594",
+        "android_client_info": {
+          "package_name": "com.example.pocketbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314454828541-8gu9q3b44frf45rhv9dlnbimdkmpc0av.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO733XdWp_ycSuF7jHAAsOMJQc8otlGW4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314454828541-8gu9q3b44frf45rhv9dlnbimdkmpc0av.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

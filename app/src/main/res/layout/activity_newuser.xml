@@ -30,7 +30,7 @@
         android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@
         android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="Email id"
+        android:hint="Email id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,12 +59,15 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
+        android:hint="Phone number"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        tools:text="phone no." />
+        app:layout_constraintTop_toBottomOf="@+id/email">
+
+    </EditText>
+<!--        tools:text="phone no." />-->
 
     <Button
         android:id="@+id/registerbt"
@@ -130,7 +133,7 @@
         android:layout_marginBottom="10dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Create new username"
+        android:hint="Create new username"
         app:layout_constraintBottom_toTopOf="@+id/name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
