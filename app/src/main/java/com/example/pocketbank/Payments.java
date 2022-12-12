@@ -62,6 +62,13 @@ public class Payments extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        textView13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(getApplicationContext(),loanpage.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

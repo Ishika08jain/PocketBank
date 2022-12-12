@@ -9,6 +9,14 @@
         <item>Marathi</item>
         <item>Tamil</item>
     </string-array>
+    <string-array name="loantype">
+        <item>SELECT TYPE OF LOAN</item>
+        <item>PERSONAL LOAN</item>
+        <item>HOME LOAN</item>
+        <item>VEHICLE LOAN</item>
+        <item>EDUCATION LOAN</item>
+        <item>GOLD LOAN</item>
+    </string-array>
     <string name="title_activity_main2">MainActivity2</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
