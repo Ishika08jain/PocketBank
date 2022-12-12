@@ -4,6 +4,8 @@ public class RegisterDatabase {
     String NewUser;
     String Password;
     String Name;
+    String EmailId;
+    String PhoneNumber;
 
     public String getNewUser() {
         return NewUser;
@@ -53,8 +55,7 @@ public class RegisterDatabase {
         PhoneNumber = phoneNumber;
     }
 
-    String EmailId;
-    String PhoneNumber;
+
     //HAVE TO ADD CHECKBOX DETAILS
 
 }
