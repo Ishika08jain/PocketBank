@@ -49,13 +49,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".accountpage"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".UpiActivity"
             android:exported="false">
             <meta-data
