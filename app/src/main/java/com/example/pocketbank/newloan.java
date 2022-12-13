@@ -57,17 +57,12 @@ public class newloan extends AppCompatActivity {
             }
 
             private void checkDataEntered() {
-
-            }
-
-        });}
-            void checkDataEntered() {
-        String N=name.getText().toString();
+                String N=name.getText().toString();
                 if (N.isEmpty()) {
-                    Toast t = Toast.makeText(this, "You must enter name to apply for loan!", Toast.LENGTH_SHORT);
+                    Toast t = Toast.makeText(getApplicationContext(), "You must enter name to apply for loan!", Toast.LENGTH_SHORT);
                     t.show();
                 }
-        String Q=quotation.getText().toString();
+                String Q=quotation.getText().toString();
                 if (Q.isEmpty()) {
                     quotation.setError("quotation for loan  is required!");
                 }
@@ -78,7 +73,14 @@ public class newloan extends AppCompatActivity {
 
 
 
+        });
+
+}}
 
 
 
-    }
+
+
+
+
+
