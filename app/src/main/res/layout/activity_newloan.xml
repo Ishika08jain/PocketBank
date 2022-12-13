@@ -58,7 +58,7 @@
         android:layout_marginBottom="19dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="NAME OF ACCOUNT HOLDER"
+        android:hint="NAME OF ACCOUNT HOLDER"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner3" />
@@ -71,7 +71,7 @@
         android:layout_marginBottom="35dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="QUOTATION FOR LOAN"
+        android:hint="QUOTATION FOR LOAN"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName11"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -82,8 +82,8 @@
         android:layout_marginStart="4dp"
         android:layout_marginBottom="72dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="AMOUNT"
+        android:inputType="number"
+        android:hint="AMOUNT"
         app:layout_constraintBottom_toTopOf="@+id/checkBox4"
         app:layout_constraintStart_toStartOf="parent" />
 

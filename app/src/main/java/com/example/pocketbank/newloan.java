@@ -36,6 +36,7 @@ public class newloan extends AppCompatActivity {
 
         textView27= findViewById(R.id.textView27);
         textView30= findViewById(R.id.textView30);
+        spinner3 = findViewById(R.id.spinner3);
         ArrayAdapter<CharSequence>adapter= ArrayAdapter.createFromResource(this, R.array.loantype, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         spinner3.setAdapter(adapter);
