@@ -25,9 +25,11 @@ public class Payments extends AppCompatActivity {
         setContentView(R.layout.activity_payments);
         imageSlider =findViewById(R.id.image_slider);
         ArrayList<SlideModel> imageList = new ArrayList<>();
-        imageList.add(new SlideModel(R.drawable.image1,null));
-        imageList.add(new SlideModel(R.drawable.image3,null));
-        imageList.add(new SlideModel(R.drawable.pocket,null));
+        imageList.add(new SlideModel(R.drawable.c1,null));
+        imageList.add(new SlideModel(R.drawable.c2,null));
+        imageList.add(new SlideModel(R.drawable.c3,null));
+        imageList.add(new SlideModel(R.drawable.c4,null));
+        imageList.add(new SlideModel(R.drawable.c5,null));
 
         imageSlider.setImageList(imageList);
         textView10 =  findViewById(R.id.textView10);
