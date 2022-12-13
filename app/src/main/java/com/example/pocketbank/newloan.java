@@ -36,6 +36,7 @@ public class newloan extends AppCompatActivity {
 
         textView27= findViewById(R.id.textView27);
         textView30= findViewById(R.id.textView30);
+        spinner3 = findViewById(R.id.spinner3);
         ArrayAdapter<CharSequence>adapter= ArrayAdapter.createFromResource(this, R.array.loantype, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         spinner3.setAdapter(adapter);
@@ -56,17 +57,12 @@ public class newloan extends AppCompatActivity {
             }
 
             private void checkDataEntered() {
-
-            }
-
-        });}
-            void checkDataEntered() {
-        String N=name.getText().toString();
+                String N=name.getText().toString();
                 if (N.isEmpty()) {
-                    Toast t = Toast.makeText(this, "You must enter name to apply for loan!", Toast.LENGTH_SHORT);
+                    Toast t = Toast.makeText(getApplicationContext(), "You must enter name to apply for loan!", Toast.LENGTH_SHORT);
                     t.show();
                 }
-        String Q=quotation.getText().toString();
+                String Q=quotation.getText().toString();
                 if (Q.isEmpty()) {
                     quotation.setError("quotation for loan  is required!");
                 }
@@ -77,7 +73,14 @@ public class newloan extends AppCompatActivity {
 
 
 
+        });
+
+}}
 
 
 
-    }
+
+
+
+
+

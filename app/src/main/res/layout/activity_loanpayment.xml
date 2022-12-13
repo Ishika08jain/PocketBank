@@ -16,7 +16,7 @@
         android:backgroundTint="#3F51B5"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Reference Number"
+        android:hint="Reference Number"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

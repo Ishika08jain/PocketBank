@@ -23,22 +23,27 @@ public class loanpayment extends AppCompatActivity {
     EditText editTextreferncenumber;
 
 
-    String[]loantype=getResources().getStringArray(R.array.loantype);
+//    String[]loantype=getResources().getStringArray(R.array.loantype);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loanpayment);
+        button12 = findViewById(R.id.button12);
+        editTextreferncenumber=findViewById(R.id.editTextTextPersonName6);
+        spinner2 = findViewById(R.id.spinner2);
         textView29 = findViewById(R.id.textView29);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.loantype, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(adapter);
-        editTextreferncenumber=(EditText)findViewById(R.id.editTextTextPersonName6);
-        button12 = findViewById(R.id.button12);
+
+
         button12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Payments.class);
+                startActivity(intent);
             }
 
 
