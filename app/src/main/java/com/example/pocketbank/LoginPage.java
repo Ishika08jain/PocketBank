@@ -58,6 +58,14 @@ public class LoginPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        linkTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),NewuserActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
 
