@@ -14,8 +14,9 @@ import android.widget.ToggleButton;
 
 public class UpiActivity extends AppCompatActivity {
     Button button7, button8, button9;
-    EditText editTextNumber3,editTextNumber4;
+    EditText editTextNumber3, editTextNumber4;
     ToggleButton onoff;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,20 +33,34 @@ public class UpiActivity extends AppCompatActivity {
         button9.setVisibility(View.INVISIBLE);
         editTextNumber4.setVisibility(View.INVISIBLE);
         editTextNumber3.setVisibility(View.INVISIBLE);
+onoff.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        if (onoff.getText().toString().equals("ON")) {
 
 
-       onoff.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
+            button7.setVisibility(View.VISIBLE);
+            button8.setVisibility(View.VISIBLE);
+            button9.setVisibility(View.VISIBLE);
+            editTextNumber3.setVisibility(View.VISIBLE);
+            editTextNumber4.setVisibility(View.VISIBLE);
 
-                   button7.setVisibility(View.VISIBLE);
-                   button8.setVisibility(View.VISIBLE);
-                   button9.setVisibility(View.VISIBLE);
-                   editTextNumber3.setVisibility(View.VISIBLE);
-                   editTextNumber4.setVisibility(View.VISIBLE);
+        } else {
 
-           }
-       });
+
+            button7.setVisibility(View.INVISIBLE);
+            button8.setVisibility(View.INVISIBLE);
+            button9.setVisibility(View.INVISIBLE);
+            editTextNumber3.setVisibility(View.INVISIBLE);
+            editTextNumber4.setVisibility(View.INVISIBLE);
+
+        }
+
+    }
+});
+
+
+
 //        } else {
 //            button7.setVisibility(View.VISIBLE);
 //            button8.setVisibility(View.VISIBLE);
@@ -56,13 +71,13 @@ public class UpiActivity extends AppCompatActivity {
 //        }
 
 
-            button9.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(getApplicationContext(), "UPI IS ENABLED", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(getApplicationContext(), Payments.class);
-                    startActivity(intent);
-                }
-            });
-        }
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "UPI IS ENABLED", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), Payments.class);
+                startActivity(intent);
+            }
+        });
     }
+}
