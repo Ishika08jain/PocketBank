@@ -40,7 +40,13 @@ public class Payments extends AppCompatActivity {
         textView15 =  findViewById(R.id.textView15);
 
 
-
+        textView10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(getApplicationContext(),accountspage.class);
+                startActivity(intent);
+            }
+        });
 
         textView11.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +77,7 @@ public class Payments extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
 
     }
