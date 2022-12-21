@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private void changeLanguage(){
-        final String languages[]={"English","Hindi"};
+        final String languages[]={"English","Hindi","Marathi"};
         AlertDialog.Builder mbuilder= new AlertDialog.Builder(this);
         mbuilder.setTitle("Choose Language");
         mbuilder.setSingleChoiceItems(languages, -1, new DialogInterface.OnClickListener() {
@@ -58,6 +58,10 @@ public class MainActivity extends AppCompatActivity{
                     }
                 else if(which==1){
                     setLocale("hi");
+                    recreate();
+                }
+                else if(which==2){
+                    setLocale("mr");
                     recreate();
                 }
 
