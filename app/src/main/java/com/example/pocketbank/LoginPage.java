@@ -13,7 +13,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.google.firebase.auth.FirebaseAuth;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
 public class LoginPage extends AppCompatActivity {
@@ -22,14 +24,18 @@ public class LoginPage extends AppCompatActivity {
     EditText editTextTextEmailAddress, editTextTextPassword;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
         button2 = findViewById(R.id.button2);
         linkTextView = findViewById(R.id.textView);
-        editTextTextEmailAddress = findViewById(R.id.editTextTextEmailAddress);
-        editTextTextPassword = findViewById(R.id.editTextTextPassword);
+     editTextTextEmailAddress = findViewById(R.id.editTextTextEmailAddress);
+         editTextTextPassword = findViewById(R.id.editTextTextPassword);
+
+
+
 //        button2.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -51,11 +57,21 @@ public class LoginPage extends AppCompatActivity {
 //            }
 //
 //        });
+
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Payments.class);
-                startActivity(intent);
+
+                String username = editTextTextEmailAddress.getText().toString();
+                String password = editTextTextPassword.getText().toString();
+
+                if (username.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(LoginPage.this, "Username and password can't be empty", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), Payments.class);
+                    startActivity(intent);
+                }
+
+
             }
         });
         linkTextView.setOnClickListener(new View.OnClickListener() {
