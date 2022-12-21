@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PocketBank</string>
+    <string name="Username">उपयोगकर्ता नाम</string>
+    <string name="Password">पासवर्ड</string>
+    <string name="Submit">प्रस्तुत</string>
+    <string name="register_here">नया उपयोगकर्ता? यहां पंजीकरण करें</string>
+    <string name="next">अगला</string>
+    <string name="rb">मेरी उम्र 18 साल से ऊपर है</string>
+    <string name="cl">भाषा बदलें</string>
+    <string name="Register">रजिस्टर करें</string>
+
+    <string name="Name">नाम</string>
+    <string name="id">ईमेल आईडी</string>
+    <string name="Male">पुरुष</string>
+    <string name="Female">महिला</string>
+    <string name="Others">अन्य</string>
+    <string name="ok">नए उपयोगकर्ता के लिए पंजीकरण करें</string>
+    <string name="Phone_number">मोबाइल नंबर</string>
+    <string name="Gender">लिंग</string>
+    <string name="Create_Your_password">नया पासवर्ड बनाएँ</string>
+    <string name="ACCOUNTS">खाता</string>
+    <string name="BILL_PAYMENTS">बिल भुगतान</string>
+    <string name="UPI">ऑनलाइन ट्रान्सफर</string>
+    <string name="LOANS">उधार</string>
+    <string name="KYC">केवाईसी</string>
+    <string name="New">नया</string>
+    <string name="profile">प्रोफ़ाइल</string>
+    <string name="need">मदद चाहिए? मुझे क्लिक करें</string>
+</resources>
