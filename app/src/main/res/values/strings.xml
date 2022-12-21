@@ -17,13 +17,39 @@
         <item>EDUCATION LOAN</item>
         <item>GOLD LOAN</item>
     </string-array>
-    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_main2" translatable="false">MainActivity2</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
     <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="previous" translatable="false">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_first_fragment" translatable="false">Hello first fragment</string>
+    <string name="hello_second_fragment" translatable="false">Hello second fragment. Arg: %1$s</string>
+    <string name="Username">Username </string>
+    <string name="Password">Password</string>
+    <string name="Submit">Submit</string>
+    <string name="register_here">New user?Register here</string>
+    <string name="rb">"I am above 18 year of age"</string>
+    <string name="Register">"Register"</string>
+    <string name="Name">"Name"</string>
+    <string name="id">"Email Id"</string>
+    <string name="Male">"Male"</string>
+    <string name="Female">"female"</string>
+    <string name="Others">"others"</string>
+    <string name="ok">"Register and create new user"</string>
+    <string name="cl">"Change Language</string>
+    <string name="Phone_number">"Phone number"</string>
+    <string name="Gender">"Gender</string>
+    <string name="Create_Your_password">"create your password</string>
+    <string name="ACCOUNTS">"ACCOUNTS"</string>
+    <string name="BILL_PAYMENTS">"BILL PAYMENTS</string>
+    <string name="UPI">"UPI</string>
+    <string name="LOANS">"LOANS"</string>
+    <string name="KYC">"KYC"</string>
+    <string name="New">"new"</string>
+    <string name="profile">"Your Profile"</string>
+    <string name="need">"NEED HELP? CLICK ME"</string>
+
+
 </resources>

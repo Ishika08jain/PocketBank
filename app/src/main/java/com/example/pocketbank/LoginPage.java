@@ -54,23 +54,19 @@ public class LoginPage extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),Payments.class);
+                Intent intent = new Intent(getApplicationContext(), Payments.class);
                 startActivity(intent);
             }
         });
         linkTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),NewuserActivity.class);
+                Intent intent = new Intent(getApplicationContext(), NewuserActivity.class);
                 startActivity(intent);
 
             }
         });
     }
-
-
-
-
 }
 
 

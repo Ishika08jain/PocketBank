@@ -28,7 +28,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="147dp"
             android:layout_marginBottom="135dp"
-            android:text="ACCOUNTS"
+            android:text="@string/ACCOUNTS"
 
             app:layout_constraintBottom_toTopOf="@+id/textView13"
             app:layout_constraintEnd_toStartOf="@+id/textView11"
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="11dp"
-            android:text="BILL PAYMENTS"
+            android:text="@string/BILL_PAYMENTS"
             app:layout_constraintEnd_toStartOf="@+id/textView12"
             app:layout_constraintStart_toEndOf="@+id/textView10"
             app:layout_constraintTop_toTopOf="@+id/textView10" />
@@ -53,7 +53,7 @@
             android:layout_marginTop="163dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="280dp"
-            android:text="UPI"
+            android:text="@string/UPI"
             app:layout_constraintBottom_toTopOf="@+id/button3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView11"
@@ -66,7 +66,7 @@
             android:layout_marginStart="9dp"
             android:layout_marginTop="153dp"
             android:layout_marginBottom="154dp"
-            android:text="LOANS"
+            android:text="@string/LOANS"
             app:layout_constraintBottom_toBottomOf="@+id/imageButton"
             app:layout_constraintStart_toStartOf="@+id/imageView11"
             app:layout_constraintTop_toTopOf="@+id/textView12" />
@@ -78,7 +78,7 @@
             android:layout_marginStart="43dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="43dp"
-            android:text="KYC"
+            android:text="@string/KYC"
             app:layout_constraintEnd_toEndOf="@+id/imageView12"
             app:layout_constraintStart_toStartOf="@+id/imageView9"
             app:layout_constraintTop_toBottomOf="@+id/imageView12" />
@@ -90,7 +90,7 @@
             android:layout_marginStart="46dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="45dp"
-            android:text="NEW"
+            android:text="@string/New"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/button3"
             app:layout_constraintTop_toBottomOf="@+id/imageView12" />
@@ -116,7 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginBottom="32dp"
-            android:text="YOUR PROFILE"
+            android:text="@string/profile"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/imageButton"
             app:layout_constraintTop_toBottomOf="@+id/imageButton" />
@@ -127,7 +127,7 @@
             android:layout_height="0dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="32dp"
-            android:text="NEED HELP? CLICK ME"
+            android:text="@string/need"
             android:textSize="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

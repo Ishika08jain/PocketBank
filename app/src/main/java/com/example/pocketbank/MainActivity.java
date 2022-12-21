@@ -1,8 +1,11 @@
 package com.example.pocketbank;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -12,22 +15,19 @@ import android.view.View;
 import android.widget.Spinner;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+import java.util.Locale;
 
-    Spinner spinner;
+public class MainActivity extends AppCompatActivity{
+
     RadioButton rb;
-    Button button;
+    Button button, button14;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        spinner = findViewById(R.id.spinner);
         rb = findViewById(R.id.rb);
         button = findViewById(R.id.button);
-        ArrayAdapter<CharSequence>adapter= ArrayAdapter.createFromResource(this, R.array.languages, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,28 +36,51 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
             }
         });
+        button14 = findViewById(R.id.button14);
+        button14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeLanguage();
+            }
+        });
+    }
 
+    private void changeLanguage(){
+        final String languages[]={"English","Hindi"};
+        AlertDialog.Builder mbuilder= new AlertDialog.Builder(this);
+        mbuilder.setTitle("Choose Language");
+        mbuilder.setSingleChoiceItems(languages, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int which) {
+                if (which==0){
+                    setLocale("");
+                    recreate();
+                    }
+                else if(which==1){
+                    setLocale("hi");
+                    recreate();
+                }
+
+
+            }
+        });
+        mbuilder.create();
+        mbuilder.show();
+    }
+
+    private void setLocale(String language) {
+        Locale locale=new Locale(language);
+        Locale.setDefault(locale);
+        Configuration configuration=new Configuration();
+        configuration.locale=locale;
+        getBaseContext().getResources().updateConfiguration(configuration,getBaseContext()
+                .getResources().getDisplayMetrics());
 
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
+
+}
 
 
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-    }
-    public void OnClick(View v){
-       if( rb.isChecked()){
-
-       }
-    }
-
-
-    }
 
 
