@@ -103,7 +103,7 @@ public class LoginPage extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     editTextTextEmailAddress.setError(null);
-                    String passwordFromDB  = snapshot.child(Userusername).child("password").getValue(String.class);
+                    String passwordFromDB  = snapshot.child(Userusername).child("Password").getValue(String.class);
                         if(!Objects.equals(passwordFromDB, Userpassword)){
                             editTextTextEmailAddress.setError(null);
                             Intent intent= new Intent(LoginPage.this, Payments.class);
