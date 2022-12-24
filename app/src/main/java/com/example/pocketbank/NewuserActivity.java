@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,11 +23,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import kotlinx.coroutines.ParentJob;
+
 public class NewuserActivity extends AppCompatActivity {
     Button registerbt;
     EditText  editTextTextPersonName3, name, email, editTextTextPassword2, phone, editTextTextPassword3;
+    TextView textView5;
+    CheckBox checkBox, checkBox2, checkBox3;
+    FirebaseDatabase database;
+    DatabaseReference myRef;
 
-    DatabaseReference reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://pocketbank-d5a21-default-rtdb.firebaseio.com/");
+
 
 
     @Override
@@ -38,6 +46,10 @@ public class NewuserActivity extends AppCompatActivity {
         name = findViewById(R.id.name);
         email = findViewById(R.id.email);
         phone = findViewById(R.id.phone);
+        textView5= findViewById(R.id.textView5);
+        checkBox= findViewById(R.id.checkBox);
+        checkBox2= findViewById(R.id.checkBox2);
+        checkBox3= findViewById(R.id.checkBox3);
         editTextTextPassword3= findViewById(R.id.editTextTextPassword3);
 
 
@@ -48,6 +60,10 @@ public class NewuserActivity extends AppCompatActivity {
         registerbt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                database = FirebaseDatabase.getInstance();
+                myRef= database.getReference("users");
+
 
 
 
@@ -66,34 +82,21 @@ public class NewuserActivity extends AppCompatActivity {
 
 
                 }
-                else{
-                    reference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                if(snapshot.hasChild(userid)){
-                                    Toast.makeText(NewuserActivity.this, "Userid is already registered", Toast.LENGTH_SHORT).show();
-                                }
-                                else{
-                                    reference.child("users").child(userid).child(FullName).setValue(editTextTextPersonName3);
-                                    reference.child("users").child(userid).child(Password).setValue(editTextTextPassword2);
-                                    reference.child("users").child(userid).child(EmailId).setValue(email);
-                                    reference.child("users").child(userid).child(PhoneNumber).setValue(phone);
-                                    reference.child("users").child(userid).child(cnfPassword).setValue(editTextTextPassword3);
-                                }
-                            Toast.makeText(NewuserActivity.this, "You have registered successfully", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(getApplicationContext(), LoginPage.class);
-                            startActivity(intent);
 
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
+                HelperClass helperClass = new HelperClass(FullName, Password, userid, EmailId, PhoneNumber);
+                myRef.child(userid).setValue(helperClass);
+                Toast.makeText(NewuserActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(NewuserActivity.this, LoginPage.class);
+                startActivity(intent);
 
 
-                    });
-                }
+
+
+
+
+
+
+
 
 
 
