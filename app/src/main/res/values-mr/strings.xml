@@ -50,7 +50,6 @@
     <string name="give">बिलाची रक्कम प्रविष्ट करा</string>
     <string name="a">A. ओळख तपशील</string>
     <string name="DOB">डीओबी</string>
-    <string name="LastName">LastName</string>
     <string name="FirstName">पहिले नाव</string>
     <string name="maritalstatus">वैवाहिक स्थिती</string>
     <string name="Single">अविवाहित</string>
@@ -75,4 +74,5 @@
     <string name="OTP">OTP</string>
     <string name="oldpin">जुना पिन</string>
     <string name="newpin">नवीन पिन</string>
+    <string name="LastName">उपनाम</string>
 </resources>
