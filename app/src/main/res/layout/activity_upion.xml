@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="152dp"
         android:layout_marginEnd="56dp"
-        android:text="UPI Payment Gateway"
+        android:text="@string/upigateway"
         android:textAlignment="center"
         android:textColor="#0C0B0B"
         android:textSize="30sp"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="63dp"
         android:layout_marginTop="83dp"
-        android:text="SET PIN"
+        android:text="@string/setpin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="60dp"
-        android:text="CHANGE PIN"
+        android:text="@string/changepin"
         app:layout_constraintBaseline_toBaselineOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
-        android:text="Done"
+        android:text="@string/DONE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -56,7 +56,7 @@
         android:layout_marginStart="3dp"
         android:layout_marginBottom="45dp"
         android:ems="10"
-        android:hint="OTP"
+        android:hint="@string/OTP"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/edit2"
         app:layout_constraintStart_toStartOf="@+id/edit2"
@@ -69,7 +69,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginBottom="44dp"
         android:ems="10"
-        android:hint="Old Pin"
+        android:hint="@string/oldpin"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/edit1"
         app:layout_constraintStart_toStartOf="@+id/edit1"
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="42dp"
         android:ems="10"
-        android:hint="New Pin"
+        android:hint="@string/newpin"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/button15"
         app:layout_constraintEnd_toEndOf="parent"

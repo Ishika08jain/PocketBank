@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="77dp"
         android:layout_marginBottom="73dp"
-        android:text="APPLY FOR LOAN"
+        android:text="@string/newloan"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/spinner3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
         android:layout_marginTop="56dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="55dp"
-        android:text="TYPE OF LOAN"
+        android:text="@string/select_loantype"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColorHighlight="#3F51B5"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName9"
@@ -58,7 +58,7 @@
         android:layout_marginTop="17dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
-        android:hint="NAME OF ACCOUNT HOLDER"
+        android:hint="@string/Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName10"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +71,7 @@
         android:layout_marginStart="7dp"
         android:layout_marginBottom="35dp"
         android:ems="10"
-        android:hint="QUOTATION FOR LOAN"
+        android:hint="@string/quotation"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName11"
         app:layout_constraintStart_toStartOf="parent" />
@@ -83,7 +83,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginBottom="316dp"
         android:ems="10"
-        android:hint="AMOUNT"
+        android:hint="@string/amount"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -94,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:layout_marginBottom="13dp"
-        android:text="I give consent to access my details to sanction loan from the unique ID"
+        android:text="@string/consent"
         app:layout_constraintBottom_toTopOf="@+id/radio_one"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -115,7 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
-        android:text="APPLY"
+        android:text="@string/Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberPassword" />
@@ -138,7 +138,7 @@
         android:layout_marginTop="132dp"
         android:layout_marginBottom="136dp"
         android:checked="true"
-        android:text="AADHAR CARD"
+        android:text="@string/aadhar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
@@ -149,7 +149,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="11dp"
-        android:text="PAN NUMBER"
+        android:text="@string/pan"
         app:layout_constraintBottom_toTopOf="@+id/editTextNumberPassword"
         app:layout_constraintStart_toEndOf="@+id/radio_one" />
 

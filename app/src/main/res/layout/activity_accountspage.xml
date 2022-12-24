@@ -10,10 +10,11 @@
         android:id="@+id/textView31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="Account"
+        android:layout_marginTop="40dp"
+        android:text="@string/ACCOUNTS"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         app:layout_constraintEnd_toStartOf="@+id/textView39"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView37"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,7 +25,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="22dp"
         android:layout_marginBottom="22dp"
-        android:text="Account Number"
+        android:text="@string/account_number"
         app:layout_constraintBottom_toBottomOf="@+id/textView34"
         app:layout_constraintEnd_toEndOf="@+id/textView38"
         app:layout_constraintStart_toStartOf="@+id/textView34"
@@ -47,7 +48,7 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="56dp"
         android:layout_marginBottom="56dp"
-        android:text="Available Balance"
+        android:text="@string/balance"
         app:layout_constraintBottom_toTopOf="@+id/textView37"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView33" />
@@ -67,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:text="Details"
+        android:text="@string/Details"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView38"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -85,7 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
-        android:text="Mini Statement"
+        android:text="@string/MStatement"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView39"
         app:layout_constraintStart_toStartOf="@+id/space" />
 
@@ -95,7 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
         android:layout_marginTop="265dp"
-        android:text="Statement"
+        android:text="@string/Statement"
         app:layout_constraintStart_toEndOf="@+id/textView38"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,7 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="26dp"
-        android:text="more"
+        android:text="@string/more"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView39"
         app:layout_constraintEnd_toEndOf="parent" />
 

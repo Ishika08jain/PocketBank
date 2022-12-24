@@ -2,10 +2,12 @@ package com.example.pocketbank;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.hardware.biometrics.BiometricPrompt;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -19,6 +21,9 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity{
 
+    //BiometricPrompt biometricPrompt;
+    //BiometricPrompt.PromptInfo promptInfo;
+    ConstraintLayout mMainLayout;
     RadioButton rb;
     Button button, button14;
 
@@ -26,6 +31,7 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+       // mMainLayout=findViewById(R.id.main_layout);
         rb = findViewById(R.id.rb);
         button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {

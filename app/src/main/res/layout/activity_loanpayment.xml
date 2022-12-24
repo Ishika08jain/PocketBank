@@ -16,7 +16,7 @@
         android:backgroundTint="#3F51B5"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Reference Number"
+        android:hint="@string/reference_number"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
         android:layout_marginEnd="62dp"
-        android:text="Pay"
+        android:text="@string/Pay"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName6"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
 
@@ -52,7 +52,7 @@
         android:layout_marginStart="13dp"
         android:layout_marginEnd="13dp"
         android:layout_marginBottom="7dp"
-        android:text="Select Type of loan"
+        android:text="@string/select_loantype"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="@+id/spinner2"
         app:layout_constraintEnd_toEndOf="parent"
