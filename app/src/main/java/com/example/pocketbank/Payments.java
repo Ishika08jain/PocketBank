@@ -18,6 +18,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +35,7 @@ public class Payments extends AppCompatActivity {
     ImageSlider imageSlider;
     TextView textView10, textView11, textView12, textView13, textView14, textView15;
     Button button3;
+    ImageButton imageButton;
     private static final int PERMISSION_REQUEST_CALL_PHONE =1;
     private static final int PERMISSION_REQUEST_READ_CONTACTS= 2;
     private static final int PERMISSION_REQUEST_GET_ACCOUNTS= 3;
@@ -59,6 +61,7 @@ public class Payments extends AppCompatActivity {
         textView14 =  findViewById(R.id.textView14);
         textView15 =  findViewById(R.id.textView15);
         button3= findViewById(R.id.button3);
+        imageButton=findViewById(R.id.imageButton);
 
 
 
@@ -103,9 +106,16 @@ public class Payments extends AppCompatActivity {
             }
         });
 
+        imageButton.setOnClickListener(new View.OnClickListener() {
+                                           @Override
+                                           public void onClick(View view) {
+                                               Intent intent=new Intent(getApplicationContext(),ProfilePage.class);
+                                               startActivity(intent);
+                                           }
+                                       });
 
 
-        PopupMenu popupMenu = new PopupMenu(this, button3);
+                PopupMenu popupMenu = new PopupMenu(this, button3);
         popupMenu.inflate(R.menu.menu_item);
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
@@ -134,6 +144,7 @@ public class Payments extends AppCompatActivity {
                                 // Handle the exception here
                                 Log.e("MyActivity", "SecurityException", e);
                             }
+                        return true;
                         }
 
                     case R.id.mailbtn:
