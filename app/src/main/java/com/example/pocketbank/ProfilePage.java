@@ -36,6 +36,7 @@ public class ProfilePage extends AppCompatActivity {
         String user_fullname=intent1.getStringExtra("name");
         String user_phoneno=intent1.getStringExtra("Phone no.");
 
+
         textView41.setText(user_fullname);
         textView42.setText(user_username);
         textView43.setText(user_fullname);
