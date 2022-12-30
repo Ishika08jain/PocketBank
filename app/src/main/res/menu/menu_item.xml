@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+            <item
+                android:id="@+id/callbtn"
+                android:title="Call now for help"
+                android:icon="@drawable/ic_baseline_call_24"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/mailbtn"
+                android:title="Email your query"
+                android:icon="@drawable/ic_baseline_contact_mail_24"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/chatbtn"
+                android:title="Chat to our assistant"
+                android:icon="@drawable/ic_baseline_chat_bubble_24"
+                app:showAsAction="never"/>
+        </menu>
+
+

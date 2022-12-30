@@ -103,11 +103,24 @@ public class LoginPage extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     editTextTextEmailAddress.setError(null);
-                    String passwordFromDB  = snapshot.child(Userusername).child("password").getValue(String.class);
+                    String passwordFromDB  = snapshot.child(Userusername).child("Password").getValue(String.class);
                         if(!Objects.equals(passwordFromDB, Userpassword)){
                             editTextTextEmailAddress.setError(null);
                             Intent intent= new Intent(LoginPage.this, Payments.class);
                             startActivity(intent);
+
+                            String email=snapshot.child(Userusername).child("emailId").getValue(String.class);
+                            String name=snapshot.child(Userusername).child("fullName").getValue(String.class);
+                            String phone=snapshot.child(Userusername).child("phoneNumber").getValue(String.class);
+                            String uid=snapshot.child(Userusername).child("userid").getValue(String.class);
+
+                            Intent intent1=new Intent(getApplicationContext(),ProfilePage.class);
+                            intent1.putExtra("name",name);
+                            intent1.putExtra("emailID",email);
+                            intent1.putExtra("Phone no.",phone);
+                            intent1.putExtra("Userid",uid);
+                            startActivity(intent1);
+                            finish();
                         }
                         else{
                             editTextTextPassword.setError("Invalid credentials");
@@ -117,6 +130,7 @@ public class LoginPage extends AppCompatActivity {
                     editTextTextEmailAddress.setError("User does not exist");
                     editTextTextEmailAddress.requestFocus();
                 }
+
             }
 
             @Override
@@ -125,6 +139,8 @@ public class LoginPage extends AppCompatActivity {
             }
         });
     }
+
+
 
 }
 
