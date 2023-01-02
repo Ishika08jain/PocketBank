@@ -11,6 +11,7 @@ import android.hardware.biometrics.BiometricPrompt;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.Toast;
 import android.view.View;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity{
     //BiometricPrompt biometricPrompt;
     //BiometricPrompt.PromptInfo promptInfo;
     ConstraintLayout mMainLayout;
-    RadioButton rb;
+    CheckBox cb;
     Button button, button14;
 
     @Override
@@ -32,16 +33,38 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
        // mMainLayout=findViewById(R.id.main_layout);
-        rb = findViewById(R.id.rb);
+        cb = findViewById(R.id.cb);
         button = findViewById(R.id.button);
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), LoginPage.class);
-                startActivity(intent);
-
+                if (cb.isChecked()) {
+                    // Checkbox is checked, move to next activity
+                    Intent intent = new Intent(MainActivity.this, LoginPage.class);
+                    startActivity(intent);
+                } else {
+                    // Checkbox is not checked, show error
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setTitle("Error")
+                            .setMessage("You are not allowed to use this app")
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    // User clicked OK button
+                                }
+                            });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
             }
         });
+
+
+
+
+
+
         button14 = findViewById(R.id.button14);
         button14.setOnClickListener(new View.OnClickListener() {
             @Override

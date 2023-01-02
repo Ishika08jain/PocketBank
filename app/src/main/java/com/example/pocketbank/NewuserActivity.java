@@ -85,14 +85,12 @@ public class NewuserActivity extends AppCompatActivity {
 
                 HelperClass helperClass = new HelperClass(FullName, Password, userid, EmailId, PhoneNumber);
                 myRef.child(userid).setValue(helperClass);
-                if(!FullName.isEmpty()||! Password.isEmpty() || !userid.isEmpty()|| !EmailId.isEmpty() || !PhoneNumber.isEmpty()){
+                if(!FullName.isEmpty()||! Password.isEmpty() || !userid.isEmpty()|| !EmailId.isEmpty() || !PhoneNumber.isEmpty()) {
                     Toast.makeText(NewuserActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(NewuserActivity.this, LoginPage.class);
+                    startActivity(intent);
                 }
-
-                Intent intent = new Intent(NewuserActivity.this, LoginPage.class);
-                startActivity(intent);
-
-
 
 
 
