@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#21ffc107"
     android:layout_height="match_parent"
     tools:context=".UpionActivity">
 
@@ -26,6 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="63dp"
         android:layout_marginTop="83dp"
+        android:background="@color/orange"
+        android:textColor="@color/white"
         android:text="@string/setpin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView32" />
@@ -36,6 +39,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="60dp"
         android:text="@string/changepin"
+        android:background="@color/orange"
+        android:textColor="@color/white"
         app:layout_constraintBaseline_toBaselineOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -45,6 +50,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
         android:text="@string/DONE"
+        android:background="@color/orange"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

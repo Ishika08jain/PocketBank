@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#21ffc107"
     tools:context=".UpiActivity">
 
     <TextView
@@ -37,7 +38,9 @@
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:layout_marginBottom="82dp"
+        android:background="@color/orange"
         android:text="@string/DONE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,6 +48,8 @@
 
     <ToggleButton
         android:id="@+id/onoff"
+        android:textColor="@color/white"
+        android:background="@color/orange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="130dp"

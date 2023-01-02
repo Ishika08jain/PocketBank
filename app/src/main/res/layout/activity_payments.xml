@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#21ffc107"
     android:orientation="vertical">
 
     <com.denzcoskun.imageslider.ImageSlider
@@ -19,6 +20,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="@color/orange"
         android:layout_height="match_parent">
 
         <TextView
@@ -50,7 +52,7 @@
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="163dp"
+            android:layout_marginTop="170dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="280dp"
             android:text="@string/UPI"
@@ -126,6 +128,8 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginEnd="16dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
             android:layout_marginBottom="32dp"
             android:text="@string/need"
             android:textSize="10dp"
@@ -167,7 +171,7 @@
             android:id="@+id/imageView10"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="62dp"
+            android:layout_marginTop="69dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="298dp"
             app:layout_constraintBottom_toTopOf="@+id/button3"

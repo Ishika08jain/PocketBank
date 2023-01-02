@@ -14,7 +14,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.google.android.gms.gcm.Task;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -33,7 +37,7 @@ public class LoginPage extends AppCompatActivity {
     EditText editTextTextEmailAddress, editTextTextPassword;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("users");
-
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,10 @@ public class LoginPage extends AppCompatActivity {
         linkTextView = findViewById(R.id.textView);
         editTextTextEmailAddress = findViewById(R.id.editTextTextEmailAddress);
         editTextTextPassword = findViewById(R.id.editTextTextPassword);
+        mAuth= FirebaseAuth.getInstance();
+
+
+
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,7 +147,17 @@ public class LoginPage extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
+
     }
+
+
+
+
 
 
 

@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#21ffc107"
     android:layout_height="match_parent"
     tools:context=".KyctwoActivity">
 
@@ -22,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="83dp"
+        android:background="@color/orange"
         android:text="@string/KYC"
         android:textColor="#050505"
         android:textSize="50sp"
@@ -185,6 +187,8 @@
 
     <Button
         android:id="@+id/button5"
+        android:textColor="@color/white"
+        android:background="@color/orange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"

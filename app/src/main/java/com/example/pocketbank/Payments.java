@@ -134,8 +134,8 @@ public class Payments extends AppCompatActivity {
                                     new String[]{Manifest.permission.CALL_PHONE},
                                     PERMISSION_REQUEST_CALL_PHONE);
                         } else {
-                        Intent intent = new Intent(Intent.ACTION_CALL);
-                        intent.setData(Uri.parse("tel:8770778897"));
+                            Intent intent = new Intent(Intent.ACTION_CALL);
+                            intent.setData(Uri.parse("tel:8770778897"));
                             try {
                                 startActivity(intent);
                             } catch (ActivityNotFoundException e) {
@@ -145,7 +145,7 @@ public class Payments extends AppCompatActivity {
                                 // Handle the exception here
                                 Log.e("MyActivity", "SecurityException", e);
                             }
-                        return true;
+                            return true;
                         }
 
                     case R.id.mailbtn:
@@ -157,15 +157,29 @@ public class Payments extends AppCompatActivity {
                                     new String[]{Manifest.permission.GET_ACCOUNTS},
                                     PERMISSION_REQUEST_GET_ACCOUNTS);
                         } else {
-                        Intent intent = new Intent(Intent.ACTION_SENDTO);
-                        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
-                        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"jainishika578@gmail.com"});
-                        intent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
-                        intent.putExtra(Intent.EXTRA_TEXT, "Body");
+                            Intent intent = new Intent(Intent.ACTION_SENDTO);
+                            intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+                            intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"jainishika578@gmail.com"});
+                            intent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
+                            intent.putExtra(Intent.EXTRA_TEXT, "Body");
                             startActivity(intent);
                         }
 
                         return true;
+
+                case R.id.chatbtn:
+
+                String phoneNumber = "9826293511"; // Replace with the phone number you want to send the message to
+                String message = "I need help with my bank!"; // Replace with the message you want to send
+                Uri uri = Uri.parse("https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + message);
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+
+                return true;
+
+
+
+
                     default:
                         return false;
                 }
