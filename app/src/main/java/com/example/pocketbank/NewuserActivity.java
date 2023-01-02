@@ -74,7 +74,7 @@ public class NewuserActivity extends AppCompatActivity {
                 String EmailId = email.getText().toString();
                 String PhoneNumber = phone.getText().toString();
 
-                if(FullName.isEmpty()|| Password.isEmpty() || userid.isEmpty()|| EmailId.isEmpty() || PhoneNumber.isEmpty()){
+                if(FullName.isEmpty() || Password.isEmpty() || userid.isEmpty()|| EmailId.isEmpty() || PhoneNumber.isEmpty()){
                     Toast.makeText(NewuserActivity.this, "Please fill all the details", Toast.LENGTH_LONG).show();
                 }
                 else if(!cnfPassword.equals(Password)){

@@ -121,6 +121,7 @@ public class LoginPage extends AppCompatActivity {
                             intent1.putExtra("Userid",uid);
                             startActivity(intent1);
                             finish();
+                            //
                         }
                         else{
                             editTextTextPassword.setError("Invalid credentials");
