@@ -9,7 +9,7 @@
     android:visibility="visible"
     tools:context=".loanpage"
     tools:visibility="visible">
-
+//
     <Button
         android:id="@+id/button10"
         android:layout_width="415dp"

@@ -111,7 +111,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:srcCompat="@tools:sample/avatars" />
-
+//
         <TextView
             android:id="@+id/textView16"
             android:layout_width="wrap_content"

@@ -6,7 +6,7 @@
     android:background="#21ffc107"
     android:layout_height="match_parent"
     tools:context=".loanpayment">
-
+//
     <EditText
         android:id="@+id/editTextTextPersonName6"
         style="@style/Widget.AppCompat.AutoCompleteTextView"

@@ -9,7 +9,7 @@
     android:backgroundTint="@color/white"
     android:textAlignment="gravity"
     tools:context=".newloan">
-
+//
 
     <TextView
         android:textColor="@color/orange"
