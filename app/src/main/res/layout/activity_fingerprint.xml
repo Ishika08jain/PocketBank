@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFA500"
     tools:context=".fingerprint">
-
+//
     <TextView
         android:id="@+id/textView47"
         android:layout_width="219dp"

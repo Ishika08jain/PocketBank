@@ -6,9 +6,12 @@ import static android.content.ContentValues.TAG;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -26,8 +29,10 @@ public class ProfilePage extends AppCompatActivity {
      TextView textView41,textView42,textView43,textView44,textView45,textView46;
     FirebaseDatabase database;
     DatabaseReference myRef;
+    Button homebutton;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +43,9 @@ public class ProfilePage extends AppCompatActivity {
         textView44 = findViewById(R.id.textView44);
         textView45 = findViewById(R.id.textView45);
         textView46 = findViewById(R.id.textView46);
+        homebutton=findViewById(R.id.homebutton);
+
+
 
 
 
@@ -45,7 +53,16 @@ public class ProfilePage extends AppCompatActivity {
         myRef= database.getReference("users");
 
 
+
          gettingdata();
+
+         homebutton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 Intent intent=new Intent(getApplicationContext(),Payments.class);
+                 startActivity(intent);
+             }
+         });
 
     }
 

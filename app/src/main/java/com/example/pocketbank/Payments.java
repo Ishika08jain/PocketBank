@@ -33,7 +33,7 @@ import java.util.TimerTask;
 
 public class Payments extends AppCompatActivity {
     ImageSlider imageSlider;
-    TextView textView10, textView11, textView12, textView13, textView14, textView15;
+    TextView textView10, textView11, textView12, textView13, textView14, textView15,textView48;
     Button button3;
     ImageButton imageButton;
     private static final int PERMISSION_REQUEST_CALL_PHONE =1;
@@ -62,7 +62,7 @@ public class Payments extends AppCompatActivity {
         textView15 =  findViewById(R.id.textView15);
         button3= findViewById(R.id.button3);
         imageButton=findViewById(R.id.imageButton);
-
+        textView48=findViewById(R.id.textView48);
 
 
 
@@ -107,13 +107,20 @@ public class Payments extends AppCompatActivity {
         });
 
         imageButton.setOnClickListener(new View.OnClickListener() {
-                                           @Override
-                                           public void onClick(View view) {
-                                               Intent intent=new Intent(getApplicationContext(),ProfilePage.class);
-                                               startActivity(intent);
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),ProfilePage.class);
+                startActivity(intent);
+            }
+        });
 
-                                           }
-                                       });
+        textView48.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),LoginPage.class);
+                startActivity(intent);
+            }
+        });
 
 
                 PopupMenu popupMenu = new PopupMenu(this, button3);
