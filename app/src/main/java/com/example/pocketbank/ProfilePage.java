@@ -41,7 +41,6 @@ public class ProfilePage extends AppCompatActivity {
         textView42 = findViewById(R.id.textView42);
         textView43 = findViewById(R.id.textView43);
         textView44 = findViewById(R.id.textView44);
-        textView45 = findViewById(R.id.textView45);
         textView46 = findViewById(R.id.textView46);
         homebutton=findViewById(R.id.homebutton);
 
@@ -71,14 +70,14 @@ public class ProfilePage extends AppCompatActivity {
         String user_username = intent1.getStringExtra("Userid");
         String user_email = intent1.getStringExtra("emailID");
         String user_fullname = intent1.getStringExtra("name");
-        String user_phoneno = intent1.getStringExtra("Phone no.");
+
 
 
         textView41.setText(user_fullname);
         textView42.setText(user_username);
         textView43.setText(user_fullname);
         textView44.setText(user_email);
-        textView45.setText(user_phoneno);
+
         textView46.setText(user_username);
 
     }

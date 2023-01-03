@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,30 +33,32 @@ import java.util.Locale;
 import java.util.Objects;
 
 public class LoginPage extends AppCompatActivity {
-    Button button2;
-    TextView linkTextView;
-    EditText editTextTextEmailAddress, editTextTextPassword;
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("users");
-    private FirebaseAuth mAuth;
+   EditText login_username, login_password;
+   TextView signupRedirectText;
+   Button login_button;
+   FirebaseDatabase database;
+   DatabaseReference myRef;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
-        button2 = findViewById(R.id.button2);
-        linkTextView = findViewById(R.id.textView);
-        editTextTextEmailAddress = findViewById(R.id.editTextTextEmailAddress);
-        editTextTextPassword = findViewById(R.id.editTextTextPassword);
-        mAuth= FirebaseAuth.getInstance();
+        login_button= findViewById(R.id.login_button);
+        login_username = findViewById(R.id.login_username);
+        login_password= findViewById(R.id.login_password);
+        signupRedirectText= findViewById(R.id.signupRedirectText);
 
 
 
 
-        button2.setOnClickListener(new View.OnClickListener() {
+
+
+
+        login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!validateusername() | !validatepassword()){
+                if(!validateusername() || !validatepassword()){
 
                 }else{
                     checkuser();
@@ -66,7 +69,7 @@ public class LoginPage extends AppCompatActivity {
 
 
         });
-        linkTextView.setOnClickListener(new View.OnClickListener() {
+        signupRedirectText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginPage.this, NewuserActivity.class);
@@ -78,66 +81,68 @@ public class LoginPage extends AppCompatActivity {
 
     }
     public Boolean validateusername() {
-        String val = editTextTextEmailAddress.getText().toString();
+        String val = login_username.getText().toString();
         if (val.isEmpty()) {
-            editTextTextEmailAddress.setError("Username cannot be empty");
+            login_username.setError("Username cannot be empty");
             return false;
         } else {
-            editTextTextEmailAddress.setError(null);
+            login_username.setError(null);
             return true;
         }
     }
         public Boolean validatepassword(){
 
-        String val = editTextTextPassword.getText().toString();
+        String val = login_password.getText().toString();
         if(val.isEmpty()){
-            editTextTextPassword.setError("Username cannot be empty");
+            login_password.setError("Username cannot be empty");
             return false;
         }
         else{
-            editTextTextPassword.setError(null);
+            login_password.setError(null);
             return true;
         }
 
     }
     public void checkuser(){
-        String Userusername = editTextTextEmailAddress.getText().toString().trim();
-        String Userpassword = editTextTextPassword.getText().toString().trim();
+        String Userusername = login_username.getText().toString().trim();
+        String Userpassword = login_password.getText().toString().trim();
 
-        DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("users");
-        Query checkUserDatabase = myRef.orderByChild("userid").equalTo(Userusername);
+         myRef = FirebaseDatabase.getInstance().getReference("users");
+        Query checkUserDatabase = myRef.orderByChild("username").equalTo(Userusername);
         checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
-                    editTextTextEmailAddress.setError(null);
-                    String passwordFromDB  = snapshot.child(Userusername).child("Password").getValue(String.class);
-                        if(!Objects.equals(passwordFromDB, Userpassword)){
-                            editTextTextEmailAddress.setError(null);
-                            Intent intent= new Intent(LoginPage.this, Payments.class);
+                    login_username.setError(null);
+                    String passwordFromDB  = snapshot.child(Userusername).child("password").getValue(String.class);
+                        if(!Objects.equals(passwordFromDB, Userpassword)) {
+                            login_username.setError(null);
+                            Intent intent = new Intent(LoginPage.this, Payments.class);
                             startActivity(intent);
 
+
                             String email=snapshot.child(Userusername).child("emailId").getValue(String.class);
-                            String name=snapshot.child(Userusername).child("fullName").getValue(String.class);
-                            String phone=snapshot.child(Userusername).child("phoneNumber").getValue(String.class);
-                            String uid=snapshot.child(Userusername).child("userid").getValue(String.class);
+                           String name=snapshot.child(Userusername).child("fullName").getValue(String.class);
+
+                           String uid=snapshot.child(Userusername).child("userid").getValue(String.class);
 
                             Intent intent1=new Intent(getApplicationContext(),ProfilePage.class);
                             intent1.putExtra("name",name);
                             intent1.putExtra("emailID",email);
-                            intent1.putExtra("Phone no.",phone);
+
                             intent1.putExtra("Userid",uid);
                             startActivity(intent1);
                             finish();
-                            //
                         }
+
+
                         else{
-                            editTextTextPassword.setError("Invalid credentials");
-                            editTextTextPassword.requestFocus();
+                            login_password.setError("Invalid credentials");
+                            login_password.requestFocus();
                         }
                 }else{
-                    editTextTextEmailAddress.setError("User does not exist");
-                    editTextTextEmailAddress.requestFocus();
+                    login_username.setError("User does not exist");
+                    login_username.requestFocus();
                 }
 
             }

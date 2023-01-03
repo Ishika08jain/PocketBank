@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -23,16 +24,16 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
+
 import kotlinx.coroutines.ParentJob;
 
 public class NewuserActivity extends AppCompatActivity {
-    Button registerbt;
-    EditText  editTextTextPersonName3, name, email, editTextTextPassword2, phone, editTextTextPassword3;
-    TextView textView5;
-    CheckBox checkBox, checkBox2, checkBox3;
-    FirebaseDatabase database;
-    DatabaseReference myRef;
-
+    Button signup_button;
+    EditText signup_name, signup_email, signup_username, signup_password;
+    TextView loginRedirectText;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+//    DatabaseReference myRef = database.getReference().child("users").push();
 
 
 
@@ -40,62 +41,53 @@ public class NewuserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newuser);
-        registerbt=findViewById(R.id.registerbt);
-        editTextTextPassword2 = findViewById(R.id.editTextTextPassword2);
-        editTextTextPersonName3= findViewById(R.id.editTextTextPersonName3);
-        name = findViewById(R.id.name);
-        email = findViewById(R.id.email);
-        phone = findViewById(R.id.phone);
-        textView5= findViewById(R.id.textView5);
-        checkBox= findViewById(R.id.checkBox);
-        checkBox2= findViewById(R.id.checkBox2);
-        checkBox3= findViewById(R.id.checkBox3);
-        editTextTextPassword3= findViewById(R.id.editTextTextPassword3);
+        loginRedirectText = findViewById(R.id.loginRedirectText);
+        signup_button = findViewById(R.id.signup_button);
+        signup_name = findViewById(R.id.signup_name);
+        signup_email = findViewById(R.id.signup_email);
+        signup_password = findViewById(R.id.signup_password);
+        signup_username = findViewById(R.id.signup_username);
 
 
-
-
-
-
-        registerbt.setOnClickListener(new View.OnClickListener() {
+        signup_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                database = FirebaseDatabase.getInstance();
-                myRef= database.getReference("users");
 
+                String name = signup_name.getText().toString();
+                String Password = signup_password.getText().toString();
+                String userid = signup_username.getText().toString();
+                String EmailId = signup_email.getText().toString();
 
-
-
-                String FullName = editTextTextPersonName3.getText().toString();
-                String Password = editTextTextPassword2.getText().toString();
-                String cnfPassword = editTextTextPassword3.getText().toString();
-                String userid = name.getText().toString();
-                String EmailId = email.getText().toString();
-                String PhoneNumber = phone.getText().toString();
-
-                if(FullName.isEmpty() || Password.isEmpty() || userid.isEmpty()|| EmailId.isEmpty() || PhoneNumber.isEmpty()){
-                    Toast.makeText(NewuserActivity.this, "Please fill all the details", Toast.LENGTH_LONG).show();
-                }
-                else if(!cnfPassword.equals(Password)){
-                    Toast.makeText(NewuserActivity.this, "Passwords are not matching", Toast.LENGTH_SHORT).show();
+                if(name.isEmpty() || Password.isEmpty() || userid.isEmpty() || EmailId.isEmpty()){
+                    Toast.makeText(NewuserActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
 
 
                 }
 
-                HelperClass helperClass = new HelperClass(FullName, Password, userid, EmailId, PhoneNumber);
-                myRef.child(userid).setValue(helperClass);
-                if(!FullName.isEmpty()||! Password.isEmpty() || !userid.isEmpty()|| !EmailId.isEmpty() || !PhoneNumber.isEmpty()) {
+
+
+
+                if(!name.isEmpty() && !Password.isEmpty() && !userid.isEmpty() && !EmailId.isEmpty()){
+                    DatabaseReference myRef = database.getReference("users");
+                    myRef.child(userid).setValue(new HelperClass(name, userid, EmailId, Password));
                     Toast.makeText(NewuserActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
-
                     Intent intent = new Intent(NewuserActivity.this, LoginPage.class);
                     startActivity(intent);
+
                 }
 
 
 
 
 
+//                HashMap<String, String> usermap = new HashMap<>();
+//                usermap.put("name", name);
+//                usermap.put("email", EmailId);
+//                usermap.put("username", userid);
+//                usermap.put("password", Password);
+//
+//                myRef.setValue(usermap);
 
 
 
@@ -106,6 +98,29 @@ public class NewuserActivity extends AppCompatActivity {
 
             }
         });
+        loginRedirectText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NewuserActivity.this, LoginPage.class);
+                startActivity(intent);
+
+            }
+        });
 
     }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
