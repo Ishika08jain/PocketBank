@@ -8,7 +8,7 @@ import android.os.Handler;
 import android.widget.ImageView;
 
 public class SplashScreen extends AppCompatActivity {
-
+//
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +16,7 @@ public class SplashScreen extends AppCompatActivity {
        new Handler().postDelayed(new Runnable() {
            @Override
            public void run() {
-               Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+               Intent intent = new Intent(SplashScreen.this, fingerprint.class);
                startActivity(intent);
             }
        }, 4000);
