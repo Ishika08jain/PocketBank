@@ -122,6 +122,13 @@ public class Payments extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        textView15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),spinwheel.class);
+                startActivity(intent);
+            }
+        });
 
 
                 PopupMenu popupMenu = new PopupMenu(this, button3);

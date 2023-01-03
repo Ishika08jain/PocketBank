@@ -99,6 +99,7 @@
     <string name="OTP">OTP</string>
     <string name="oldpin">OLD PIN</string>
     <string name="newpin">NEW PIN</string>
+    <string name="Claimgift"> Claim gift</string>
 
 
 </resources>

@@ -76,4 +76,5 @@
     <string name="OTP">ओटीपी</string>
     <string name="oldpin">पुराना पिन</string>
     <string name="newpin">नया पिन</string>
+    <string name="Claimgift">एक उपहार का दावा करें</string>
 </resources>

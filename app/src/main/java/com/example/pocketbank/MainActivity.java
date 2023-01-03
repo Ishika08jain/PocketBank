@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 if (cb.isChecked()) {
                     // Checkbox is checked, move to next activity
-                    Intent intent = new Intent(MainActivity.this, LoginPage.class);
+                    Intent intent = new Intent(MainActivity.this, fingerprint.class);
                     startActivity(intent);
                 } else {
                     // Checkbox is not checked, show error
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private void changeLanguage(){
-        final String languages[]={"English","Hindi","Marathi"};
+        final String languages[]={"English","Hindi","Marathi","Gujarati"};
         AlertDialog.Builder mbuilder= new AlertDialog.Builder(this);
         mbuilder.setTitle("Choose Language");
         mbuilder.setSingleChoiceItems(languages, -1, new DialogInterface.OnClickListener() {
@@ -91,6 +91,10 @@ public class MainActivity extends AppCompatActivity{
                 }
                 else if(which==2){
                     setLocale("mr");
+                    recreate();
+                }
+                else if(which==3){
+                    setLocale("gu");
                     recreate();
                 }
 
