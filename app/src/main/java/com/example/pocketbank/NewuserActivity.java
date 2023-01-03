@@ -71,6 +71,7 @@ public class NewuserActivity extends AppCompatActivity {
                 if(!name.isEmpty() && !Password.isEmpty() && !userid.isEmpty() && !EmailId.isEmpty()){
                     DatabaseReference myRef = database.getReference("users");
                     myRef.child(userid).setValue(new HelperClass(name, userid, EmailId, Password));
+
                     Toast.makeText(NewuserActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(NewuserActivity.this, LoginPage.class);
                     startActivity(intent);

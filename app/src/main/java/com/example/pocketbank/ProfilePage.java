@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Objects;
 
 public class ProfilePage extends AppCompatActivity {
-     TextView textView41,textView42,textView43,textView44,textView45,textView46;
+     TextView textView41,textView42,textView43,textView44,textView46;
     FirebaseDatabase database;
     DatabaseReference myRef;
     Button homebutton;

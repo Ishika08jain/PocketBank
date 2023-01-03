@@ -36,8 +36,7 @@ public class LoginPage extends AppCompatActivity {
    EditText login_username, login_password;
    TextView signupRedirectText;
    Button login_button;
-   FirebaseDatabase database;
-   DatabaseReference myRef;
+
 
 
     @Override
@@ -58,7 +57,7 @@ public class LoginPage extends AppCompatActivity {
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!validateusername() || !validatepassword()){
+                if(!validateusername() | !validatepassword()){
 
                 }else{
                     checkuser();
@@ -107,7 +106,7 @@ public class LoginPage extends AppCompatActivity {
         String Userusername = login_username.getText().toString().trim();
         String Userpassword = login_password.getText().toString().trim();
 
-         myRef = FirebaseDatabase.getInstance().getReference("users");
+        DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("users");
         Query checkUserDatabase = myRef.orderByChild("username").equalTo(Userusername);
         checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -115,24 +114,20 @@ public class LoginPage extends AppCompatActivity {
                 if(snapshot.exists()){
                     login_username.setError(null);
                     String passwordFromDB  = snapshot.child(Userusername).child("password").getValue(String.class);
-                        if(!Objects.equals(passwordFromDB, Userpassword)) {
+                        if(passwordFromDB.equals(Userpassword)) {
                             login_username.setError(null);
-                            Intent intent = new Intent(LoginPage.this, Payments.class);
-                            startActivity(intent);
 
 
-                            String email=snapshot.child(Userusername).child("emailId").getValue(String.class);
-                           String name=snapshot.child(Userusername).child("fullName").getValue(String.class);
+                            String emailfromDB=snapshot.child(Userusername).child("email").getValue(String.class);
+                           String namefromDB=snapshot.child(Userusername).child("name").getValue(String.class);
 
-                           String uid=snapshot.child(Userusername).child("userid").getValue(String.class);
+                           String uid=snapshot.child(Userusername).child("username").getValue(String.class);
 
-                            Intent intent1=new Intent(getApplicationContext(),ProfilePage.class);
-                            intent1.putExtra("name",name);
-                            intent1.putExtra("emailID",email);
-
+                            Intent intent1=new Intent(LoginPage.this ,ProfilePage.class);
+                            intent1.putExtra("name",namefromDB);
+                            intent1.putExtra("emailID",emailfromDB);
                             intent1.putExtra("Userid",uid);
                             startActivity(intent1);
-                            finish();
                         }
 
 
