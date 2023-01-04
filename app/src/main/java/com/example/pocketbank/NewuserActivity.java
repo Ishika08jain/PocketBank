@@ -56,10 +56,10 @@ public class NewuserActivity extends AppCompatActivity {
 
                 String name = signup_name.getText().toString();
                 String Password = signup_password.getText().toString();
-                String userid = signup_username.getText().toString();
+                String Userid = signup_username.getText().toString();
                 String EmailId = signup_email.getText().toString();
 
-                if(name.isEmpty() || Password.isEmpty() || userid.isEmpty() || EmailId.isEmpty()){
+                if(name.isEmpty() || Password.isEmpty() || Userid.isEmpty() || EmailId.isEmpty()){
                     Toast.makeText(NewuserActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
 
 
@@ -68,9 +68,9 @@ public class NewuserActivity extends AppCompatActivity {
 
 
 
-                if(!name.isEmpty() && !Password.isEmpty() && !userid.isEmpty() && !EmailId.isEmpty()){
+                if(!name.isEmpty() && !Password.isEmpty() && !Userid.isEmpty() && !EmailId.isEmpty()){
                     DatabaseReference myRef = database.getReference("users");
-                    myRef.child(userid).setValue(new HelperClass(name, userid, EmailId, Password));
+                    myRef.child(Userid).setValue(new HelperClass(name, Userid, EmailId, Password));
 
                     Toast.makeText(NewuserActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(NewuserActivity.this, LoginPage.class);
