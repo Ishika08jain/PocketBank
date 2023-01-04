@@ -37,7 +37,7 @@
                 android:background="@color/colorPrimary"
                 android:layout_marginTop="40dp"
                 android:padding="8dp"
-                android:hint="Name"
+                android:hint="@string/LastName"
                 android:inputType="textPersonName"
                 android:drawableLeft="@drawable/ic_baseline_person_24"
                 android:drawablePadding="8dp"
@@ -50,10 +50,10 @@
                 android:layout_marginTop="20dp"
                 android:padding="8dp"
                 android:inputType="textEmailAddress"
-                android:hint="Email"
-                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:hint="@string/FirstName"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black" />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
