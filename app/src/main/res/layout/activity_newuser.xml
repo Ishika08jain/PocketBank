@@ -50,8 +50,8 @@
                 android:layout_marginTop="20dp"
                 android:padding="8dp"
                 android:inputType="textEmailAddress"
-                android:hint="@string/FirstName"
-                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:hint="@string/Username"
+                android:drawableLeft="@drawable/ic_baseline_person_pin_24"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black" />
             <EditText
@@ -61,8 +61,8 @@
                 android:background="@color/colorPrimary"
                 android:layout_marginTop="20dp"
                 android:padding="8dp"
-                android:hint="Username"
-                android:drawableLeft="@drawable/ic_baseline_person_pin_24"
+                android:hint="@string/FirstName"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"/>
             <EditText
